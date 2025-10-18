@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "question": "What does LMS stand for?",
+    "options": [
+      "Learning Management System",
+      "Library Management System",
+      "Language Model Software"
+    ],
+    "answer": "Learning Management System"
+  },
+  {
+    "id": 2,
+    "question": "Which hook is used to manage state in React?",
+    "options": ["useState", "useEffect", "useRef"],
+    "answer": "useState"
+  },
+  {
+    "id": 3,
+    "question": "Which command is used to start a new React Native project?",
+    "options": [
+      "npx create-react-app myApp",
+      "npx react-native init MyApp",
+      "npm start MyApp"
+    ],
+    "answer": "npx react-native init MyApp"
+  },
+  {
+    "id": 4,
+    "question": "What is the purpose of AsyncStorage in React Native?",
+    "options": [
+      "To manage navigation between screens",
+      "To store data locally on the device",
+      "To make network requests"
+    ],
+    "answer": "To store data locally on the device"
+  },
+  {
+    "id": 5,
+    "question": "Which hook is used to perform side effects in React?",
+    "options": ["useState", "useEffect", "useMemo"],
+    "answer": "useEffect"
+  },
+  {
+    "id": 6,
+    "question": "Which component is used for scrolling content in React Native?",
+    "options": ["ScrollView", "FlatList", "View"],
+    "answer": "ScrollView"
+  },
+  {
+    "id": 7,
+    "question": "What is JSX?",
+    "options": [
+      "A templating language used in Node.js",
+      "A syntax extension for JavaScript used in React",
+      "A database query language"
+    ],
+    "answer": "A syntax extension for JavaScript used in React"
+  },
+  {
+    "id": 8,
+    "question": "Which function allows navigation between screens in React Navigation?",
+    "options": ["navigate()", "redirect()", "goTo()"],
+    "answer": "navigate()"
+  },
+  {
+    "id": 9,
+    "question": "Which hook provides access to the navigation object inside a component?",
+    "options": ["useRoute", "useNavigation", "useContext"],
+    "answer": "useNavigation"
+  },
+  {
+    "id": 10,
+    "question": "What is the purpose of Context API in React?",
+    "options": [
+      "To handle asynchronous requests",
+      "To manage global state without prop drilling",
+      "To define styles for components"
+    ],
+    "answer": "To manage global state without prop drilling"
+  }
+]

@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigator from './navigation';
+import { QuizProvider } from './context/QuizContext';
 
 export type RootStackParamList = {
   Quiz: undefined;
@@ -8,6 +9,8 @@ export type RootStackParamList = {
 
 export default function App() {
   return (
-     <Navigator/>
+    <QuizProvider>
+      <Navigator />
+    </QuizProvider>
   );
 }
