@@ -1,13 +1,13 @@
-import React from 'react'
-import { Text } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import React from 'react';
+import Navigator from './navigation';
 
-export const App = () => {
+export type RootStackParamList = {
+  Quiz: undefined;
+  Result: { total: number; score: number };
+};
+
+export default function App() {
   return (
-    <SafeAreaView>
-      <Text style={{color:"white"}}>App</Text>
-    </SafeAreaView>
-  )
+     <Navigator/>
+  );
 }
-
-export default App
