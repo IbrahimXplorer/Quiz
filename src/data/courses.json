@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "title": "React Native for Beginners",
+    "description": "Learn the basics of React Native to build cross-platform mobile apps.",
+    "instructor": "Sarah Johnson",
+    "level": "Beginner",
+    "duration": "6 hours",
+    "price": 49.99,
+    "rating": 4.7,
+    "students": 1200,
+    "category": "Mobile Development",
+     "imageUrl": "https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+  },
+  {
+    "id": 2,
+    "title": "Advanced React Patterns",
+    "description": "Master advanced React concepts including hooks, context, and performance optimization.",
+    "instructor": "David Lee",
+    "level": "Advanced",
+    "duration": "8 hours",
+    "price": 69.99,
+    "rating": 4.8,
+    "students": 950,
+    "category": "Web Development",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+  },
+  {
+    "id": 3,
+    "title": "Full-Stack JavaScript Bootcamp",
+    "description": "Become a full-stack developer using Node.js, Express, and MongoDB.",
+    "instructor": "Emma Brown",
+    "level": "Intermediate",
+    "duration": "12 hours",
+    "price": 89.99,
+    "rating": 4.6,
+    "students": 2000,
+    "category": "Web Development",
+    "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+  },
+  {
+    "id": 4,
+    "title": "Python for Data Science",
+    "description": "Analyze data and build predictive models using Python and popular libraries.",
+    "instructor": "James Miller",
+    "level": "Intermediate",
+    "duration": "10 hours",
+    "price": 79.99,
+    "rating": 4.9,
+    "students": 3100,
+    "category": "Data Science",
+    "imageUrl": "https://images.unsplash.com/photo-1581090700227-1e37b190418e"
+  },
+  {
+    "id": 5,
+    "title": "UI/UX Design Fundamentals",
+    "description": "Understand user experience principles and learn to design stunning interfaces.",
+    "instructor": "Olivia Davis",
+    "level": "Beginner",
+    "duration": "5 hours",
+    "price": 39.99,
+    "rating": 4.5,
+    "students": 870,
+    "category": "Design",
+    "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+  },
+  {
+    "id": 6,
+    "title": "Machine Learning with TensorFlow",
+    "description": "Implement machine learning algorithms and models using TensorFlow.",
+    "instructor": "Michael Chen",
+    "level": "Advanced",
+    "duration": "15 hours",
+    "price": 99.99,
+    "rating": 4.8,
+    "students": 1750,
+    "category": "AI & Machine Learning",
+    "imageUrl": "https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+  }
+]

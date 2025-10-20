@@ -2,9 +2,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { QuizScreen, ResultScreen } from '../screens';
+import { BottomTabNavigator } from './BottomTabNavigator';
 
 export type RootStackParamList = {
-  Quiz: undefined;
+  Root: undefined;
   Result: { total: number; score: number };
 };
 
@@ -14,14 +15,14 @@ const Navigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Quiz"
+        initialRouteName="Root"
         screenOptions={{
           headerShown: false,
         }}
       >
         <Stack.Screen
-          name="Quiz"
-          component={QuizScreen}
+          name="Root"
+          component={BottomTabNavigator}
           options={{ title: 'Quiz' }}
         />
         <Stack.Screen

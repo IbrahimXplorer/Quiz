@@ -58,7 +58,7 @@ export const ResultScreen = (): ReactElement => {
           style={styles.btn}
           onPress={() => {
             resetQuiz();
-            navigation.navigate('Quiz');
+            navigation.navigate('Root');
           }}
         >
           <Text style={styles.btnText}>Try Again</Text>
@@ -66,7 +66,7 @@ export const ResultScreen = (): ReactElement => {
 
         <TouchableOpacity
           style={[styles.btn, styles.secondaryBtn]}
-          onPress={() => navigation.navigate('Courses')}
+          onPress={() => navigation.navigate('Root', { screen: 'Courses' })}
         >
           <Text style={styles.btnText}>Go to Courses</Text>
         </TouchableOpacity>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   questionText: { fontSize: 16, fontWeight: '600', marginBottom: 5 },
   answerText: { fontSize: 15, marginBottom: 3 },
   correctAnswer: { fontSize: 15, color: '#444' },
-  correctCard: { borderColor: '#28a745', backgroundColor: '#e6f9ed' },
+  correctCard: { borderColor: '#ffcd00', backgroundColor: '#ffcd00' },
   wrongCard: { borderColor: '#dc3545', backgroundColor: '#fdecea' },
   correctText: { color: '#28a745', fontWeight: '600' },
   wrongText: { color: '#dc3545', fontWeight: '600' },
@@ -112,12 +112,12 @@ const styles = StyleSheet.create({
   },
   btn: {
     flex: 1,
-    backgroundColor: '#007bff',
+    backgroundColor: '#ffcd00',
     padding: 12,
     borderRadius: 8,
     marginHorizontal: 5,
   },
-  secondaryBtn: { backgroundColor: '#6c757d' },
+  secondaryBtn: { backgroundColor: '#28a745' },
   btnText: { color: '#fff', textAlign: 'center', fontWeight: 'bold' },
 });
 

@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import { useQuiz } from '../context/QuizContext';
+import FastImage from 'react-native-fast-image';
 
 const { width } = Dimensions.get('window');
 
@@ -43,7 +44,10 @@ export const QuizScreen = () => {
       {item.options.map((opt: string) => (
         <TouchableOpacity
           key={opt}
-          style={[styles.option, selected[index] === opt && styles.selected]}
+          style={[
+            styles.option,
+            selected[index] === opt && styles.optionSelected,
+          ]}
           onPress={() => {
             setSelected(prev => ({ ...prev, [index]: opt }));
             selectAnswer(opt);
@@ -60,6 +64,14 @@ export const QuizScreen = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.logoContainer}>
+        <FastImage
+          source={require('../assets/images/logo.png')}
+          style={styles.logo}
+          resizeMode="contain"
+        />
+      </View>
+
       <FlatList
         ref={flatListRef}
         data={questions}
@@ -77,11 +89,11 @@ export const QuizScreen = () => {
       />
 
       <TouchableOpacity
-        style={[styles.nextBtn, !isAnswered && styles.disabledBtn]}
+        style={[styles.nextButton, !isAnswered && styles.nextButtonDisabled]}
         onPress={handleNext}
         disabled={!isAnswered}
       >
-        <Text style={styles.nextText}>
+        <Text style={styles.nextButtonText}>
           {currentIndex === questions.length - 1 ? 'Finish' : 'Next'}
         </Text>
       </TouchableOpacity>
@@ -90,28 +102,73 @@ export const QuizScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center' },
-  questionContainer: { padding: 20, justifyContent: 'center' },
-  question: { fontSize: 18, marginBottom: 20 },
-  progress: { fontSize: 16, marginBottom: 10, color: '#666' },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+  },
+  logoContainer: {
+    alignItems: 'center',
+    marginTop: 50,
+    marginBottom: 10,
+  },
+  logo: {
+    width: 140,
+    height: 60,
+  },
+  questionContainer: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center',
+  },
+
+  progress: {
+    fontSize: 16,
+    color: '#666',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  question: {
+    fontSize: 18,
+    fontWeight: '600',
+    marginBottom: 20,
+    textAlign: 'center',
+    color: '#222',
+  },
+  optionText: {
+    fontSize: 16,
+    color: '#333',
+  },
+
   option: {
     padding: 15,
     borderWidth: 1,
-    borderRadius: 8,
-    marginVertical: 5,
     borderColor: '#ccc',
-  },
-  selected: { backgroundColor: '#cce5ff', borderColor: '#007bff' },
-  nextBtn: {
-    backgroundColor: '#007bff',
-    padding: 15,
     borderRadius: 8,
-    margin: 20,
+    marginVertical: 6,
+    backgroundColor: '#fafafa',
   },
-  disabledBtn: {
+  optionSelected: {
+    backgroundColor: '#ffcd00',
+    borderColor: '#ffcd00',
+  },
+
+  nextButton: {
+    backgroundColor: '#ffcd00',
+    paddingVertical: 15,
+    borderRadius: 8,
+    marginHorizontal: 20,
+    marginBottom: 25,
+  },
+  nextButtonDisabled: {
     backgroundColor: '#a0a0a0',
   },
-  nextText: { color: '#fff', textAlign: 'center', fontWeight: 'bold' },
+  nextButtonText: {
+    color: 'black',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    fontSize: 16,
+  },
 });
 
 export default QuizScreen;
