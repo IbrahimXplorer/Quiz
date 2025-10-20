@@ -28,6 +28,9 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, onPress }) => {
         <Text style={styles.title} numberOfLines={2}>
           {course.title}
         </Text>
+        <Text style={styles.description} numberOfLines={2}>
+          {course.description}
+        </Text>
         <Text style={styles.instructor} numberOfLines={1}>
           {course.instructor}
         </Text>
@@ -47,8 +50,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    marginHorizontal:10,
-    borderRadius:10
+    marginHorizontal: 10,
+    borderRadius: 10,
   },
   image: {
     width: '100%',
@@ -57,10 +60,16 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 10,
+    gap: 5,
   },
   title: {
     fontSize: 16,
     fontWeight: '600',
+    color: '#222',
+  },
+  description: {
+    fontSize: 12,
+    fontWeight: '400',
     color: '#222',
   },
   instructor: {
