@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import {
   Dimensions,
   FlatList,
+  StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -64,6 +65,7 @@ export const QuizScreen = () => {
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle='dark-content' />
       <View style={styles.logoContainer}>
         <FastImage
           source={require('../assets/images/logo.png')}

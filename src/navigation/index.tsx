@@ -1,8 +1,10 @@
-import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { QuizScreen, ResultScreen } from '../screens';
+import React from 'react';
+import { ResultScreen } from '../screens';
 import { BottomTabNavigator } from './BottomTabNavigator';
+
+import BootSplash from "react-native-bootsplash";
 
 export type RootStackParamList = {
   Root: undefined;
@@ -13,7 +15,9 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const Navigator = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer onReady={() => {
+      BootSplash.hide();
+    }}>
       <Stack.Navigator
         initialRouteName="Root"
         screenOptions={{

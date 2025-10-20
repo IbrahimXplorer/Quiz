@@ -27,13 +27,17 @@ export const ResultScreen = (): ReactElement => {
         <Text style={styles.questionText}>
           {index + 1}. {item.question}
         </Text>
+
         <Text style={styles.answerText}>
           Your Answer:{' '}
           <Text style={isCorrect ? styles.correctText : styles.wrongText}>
             {item.userAnswer ?? 'Not answered'}
           </Text>
         </Text>
-        <Text style={styles.correctAnswer}>Correct Answer: {item.answer}</Text>
+
+        <Text style={styles.correctAnswer}>
+          Correct Answer: {item.answer}
+        </Text>
       </View>
     );
   };
@@ -50,7 +54,7 @@ export const ResultScreen = (): ReactElement => {
         keyExtractor={item => item.id.toString()}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 80 }}
+        contentContainerStyle={styles.listContent}
       />
 
       <View style={styles.buttons}>
@@ -76,14 +80,25 @@ export const ResultScreen = (): ReactElement => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: '#fff' },
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#fff',
+  },
+
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
     marginTop: 40,
   },
-  score: { fontSize: 18, textAlign: 'center', marginVertical: 10 },
+
+  score: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginVertical: 10,
+  },
+
   message: {
     textAlign: 'center',
     marginTop: 5,
@@ -91,34 +106,78 @@ const styles = StyleSheet.create({
     color: '#555',
     marginBottom: 20,
   },
+
+  listContent: {
+    paddingBottom: 80,
+  },
+
   questionCard: {
     borderWidth: 1,
     borderRadius: 8,
     padding: 15,
     marginBottom: 12,
   },
-  questionText: { fontSize: 16, fontWeight: '600', marginBottom: 5 },
-  answerText: { fontSize: 15, marginBottom: 3 },
-  correctAnswer: { fontSize: 15, color: '#444' },
-  correctCard: { borderColor: '#ffcd00', backgroundColor: '#ffcd00' },
-  wrongCard: { borderColor: '#dc3545', backgroundColor: '#fdecea' },
-  correctText: { color: '#28a745', fontWeight: '600' },
-  wrongText: { color: '#dc3545', fontWeight: '600' },
+
+  questionText: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 5,
+  },
+
+  answerText: {
+    fontSize: 15,
+    marginBottom: 3,
+  },
+
+  correctAnswer: {
+    fontSize: 15,
+    color: '#444',
+  },
+
+  correctCard: {
+    borderColor: '#ffcd00',
+    backgroundColor: '#fffae5',
+  },
+
+  wrongCard: {
+    borderColor: '#dc3545',
+    backgroundColor: '#fdecea',
+  },
+
+  correctText: {
+    color: '#28a745',
+    fontWeight: '600',
+  },
+
+  wrongText: {
+    color: '#dc3545',
+    fontWeight: '600',
+  },
+
   buttons: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 10,
     marginBottom: 30,
   },
+
   btn: {
     flex: 1,
     backgroundColor: '#ffcd00',
-    padding: 12,
+    paddingVertical: 12,
     borderRadius: 8,
     marginHorizontal: 5,
   },
-  secondaryBtn: { backgroundColor: '#28a745' },
-  btnText: { color: '#fff', textAlign: 'center', fontWeight: 'bold' },
+
+  secondaryBtn: {
+    backgroundColor: '#28a745',
+  },
+
+  btnText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
 });
 
 export default ResultScreen;
